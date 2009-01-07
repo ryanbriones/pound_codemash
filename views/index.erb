@@ -1,0 +1,26 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    
+    <title>POUND CODEMASH</title>
+
+    <link rel="stylesheet" href="/stylesheets/pound_codemash.css" type="text/css" />
+  </head>
+  
+  <body>
+    <h1>POUND CODEMASH (#codemash on twitter)</h1>
+
+    <div class="tweets">
+      <% @tweets.each do |tweet| %>
+      <div class="tweet">
+	<div class="quote"><%= tweet.text_codemashified %></div>
+	<div class="meta"><%= tweet.from_user %> - <%= tweet.created_at.strftime('%Y-%m-%d %I:%M %p') %></div>
+      </div>
+      <% end %>
+    </div>
+  </body>
+</html>
+

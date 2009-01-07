@@ -1,0 +1,42 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #000000;
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    margin: 15px 0;
+    padding: 15px 20px;
+    width: 400px;
+    background-color: #666666;
+    color: #FFFFFF;
+}
+
+div.tweets {
+    padding: 40px 200px;
+}
+
+div.tweet {
+    color: #CCCCCC;
+    padding-bottom: 40px;
+}
+
+div.tweet div.quote {
+    font-size: 2em;
+    text-transform: uppercase;
+}
+
+div.tweet div.quote span.hl_codemash {
+    font-size: 1.5em;
+    color: #FFFFFF;
+    font-weight: bold;
+}
+
+div.tweet div.meta {
+    padding: 5px;
+    background-color: #333333;
+}
