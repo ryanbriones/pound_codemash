@@ -7,7 +7,7 @@
     
     <title>POUND CODEMASH</title>
 
-    <link rel="stylesheet" href="/stylesheets/pound_codemash.css" type="text/css" />
+    <link rel="stylesheet" href="/pound_codemash/stylesheets/pound_codemash.css" type="text/css" />
   </head>
   
   <body>
@@ -17,7 +17,7 @@
       <% @tweets.each do |tweet| %>
       <div class="tweet">
 	<div class="quote"><%= tweet.text_codemashified %></div>
-	<div class="meta"><%= tweet.from_user %> - <%= tweet.created_at.strftime('%Y-%m-%d %I:%M %p') %></div>
+	<div class="meta"><%= tweet.from_user %> - <%= tweet.created_at_codemash_time.strftime('%Y-%m-%d %I:%M %p') %></div>
       </div>
       <% end %>
     </div>
