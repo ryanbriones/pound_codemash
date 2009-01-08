@@ -1,6 +1,11 @@
 <% @tweets.each do |tweet| %>
 <li class="tweet" id="<%= tweet.id %>">
-  <div class="quote"><%= tweet.text_codemashified %></div>
-  <div class="meta"><%= tweet.from_user %> - <%= tweet.created_at_codemash_time.strftime('%Y-%m-%d %I:%M %p') %></div>
+  <div class="quote">
+    <a href="http://twitter.com/<%= tweet.from_user %>/status/<%= tweet.id %>" target="_blank"><%= tweet.text_codemashified %></a>
+  </div>
+  <div class="meta">
+    <a href="http://twitter.com/<%= tweet.from_user %>" target="_blank"><%= tweet.from_user %></a> - 
+    <%= tweet.created_at_codemash_time.strftime('%Y-%m-%d %I:%M %p') %>
+  </div>
 </li>
 <% end %>

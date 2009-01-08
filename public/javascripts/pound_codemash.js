@@ -1,7 +1,7 @@
 $( function() {
   $('#tweets').scrollbox();
   setInterval( fetchTweets, 30000 );
-  setInterval( moveLastTweet, 3000 );
+  setInterval( moveLastTweet, 4000 );
 
   function fetchTweets() {
     var since = $('#queue .tweet, #tweets .tweet').filter(':first').attr('id');

@@ -50,6 +50,19 @@ div#tweets ul li { display: block; }
     text-transform: uppercase;
 }
 
+.tweet div.quote a {
+    color: #CCCCCC;
+    text-decoration: none;
+}
+
+.tweet div.quote a:hover {
+    text-decoration: underline;
+}
+
+.tweet div.meta a {
+    color: #CCCCCC;
+}
+
 .tweet div.quote span.hl_codemash {
     font-size: 1.5em;
     color: #FFFFFF;
