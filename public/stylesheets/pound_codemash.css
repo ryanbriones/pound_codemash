@@ -16,27 +16,39 @@ h1 {
     color: #FFFFFF;
 }
 
-div.tweets {
+h1 span {
+    font-size: 0.5em;
+    font-weight: normal;
+}
+
+h1 span a {
+    color: #000000;
+}
+
+div#tweets {
     padding: 40px 200px;
 }
 
-div.tweet {
+div#tweets ul { list-style: none; margin: 0; padding: 0; }
+div#tweets ul li { display: block; }
+
+.tweet {
     color: #CCCCCC;
     padding-bottom: 40px;
 }
 
-div.tweet div.quote {
+.tweet div.quote {
     font-size: 2em;
     text-transform: uppercase;
 }
 
-div.tweet div.quote span.hl_codemash {
+.tweet div.quote span.hl_codemash {
     font-size: 1.5em;
     color: #FFFFFF;
     font-weight: bold;
 }
 
-div.tweet div.meta {
+.tweet div.meta {
     padding: 5px;
     background-color: #333333;
 }

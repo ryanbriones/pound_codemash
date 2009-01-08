@@ -8,18 +8,38 @@
     <title>POUND CODEMASH</title>
 
     <link rel="stylesheet" href="/pound_codemash/stylesheets/pound_codemash.css" type="text/css" />
+    <script src="/pound_codemas/javascripts/jquery.js" type="text/javascript"></script>
+    <script src="/pound_codemas/javascripts/jquery.scrollbox.js" type="text/javascript"></script>
+    <script src="/pound_codemas/javascripts/pound_codemash.js" type="text/javascript"></script>
   </head>
   
   <body>
-    <h1>POUND CODEMASH (#codemash on twitter)</h1>
+    <h1>
+      POUND CODEMASH (#codemash on twitter)<br />
+      <span>by <a href="http://twitter.com/ryanbriones">@ryanbriones</a> and 
+      <a href="http://twitter.com/adamlogic">@adamlogic</a></span>
+    </h1>
 
-    <div class="tweets">
+    <div id="tweets">
+      <ul>
       <% @tweets.each do |tweet| %>
-      <div class="tweet">
+      <li class="tweet" id="<%= tweet.id %>">
 	<div class="quote"><%= tweet.text_codemashified %></div>
 	<div class="meta"><%= tweet.from_user %> - <%= tweet.created_at_codemash_time.strftime('%Y-%m-%d %I:%M %p') %></div>
-      </div>
+      </li>
       <% end %>
+      </ul>
+    </div>
+
+    <div id="queue" style="display: none">
+      <ul>
+      <% @queued_tweets.each do |tweet| %>
+      <li class="tweet" id="<%= tweet.id %>">
+	<div class="quote"><%= tweet.text_codemashified %></div>
+	<div class="meta"><%= tweet.from_user %> - <%= tweet.created_at_codemash_time.strftime('%Y-%m-%d %I:%M %p') %></div>
+      </li>
+      <% end %>
+      </ul>
     </div>
   </body>
 </html>
