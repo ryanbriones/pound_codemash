@@ -5,7 +5,7 @@ $( function() {
 
   function fetchTweets() {
     var since = $('#queue .tweet, #tweets .tweet').filter(':first').attr('id');
-    $.get('/updated', {since: since}, function(data) {
+    $.get('/pound_codemash/updated', {since: since}, function(data) {
       $('#queue ul').prepend(data);
     });
   }
