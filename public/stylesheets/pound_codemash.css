@@ -25,6 +25,14 @@ h1 span a {
     color: #000000;
 }
 
+div#source {
+    width: 400px;
+    color: #FFFFFF;
+    text-align: right;
+}
+
+div#source a { color: #CCCCCC; }
+
 div#tweets {
     padding: 40px 200px;
 }
